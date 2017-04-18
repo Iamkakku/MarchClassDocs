@@ -1,0 +1,79 @@
+Arrays and Strings
+
+Array - is used to store similar kind of data at one place
+
+int i = 10;
+int[] i = {10,20,30,40};
+
+Array is used to hold not only primitive data types it is used to even store object data types.
+
+int[] arr = new int[5];
+
+Declaring the array
+Initializing the array, giving data 
+iterarte the array
+
+Two Dimensianal Array
+ int[][] arr = new int[4][3];
+ 
+Strings - itself is class in java, immutable(Values once assigned to it are not changed)
+
+String s = "hello";
+s.concat("world");
+System.out.plintln(s);
+
+
+there are two ways to declare strings :
+
+1) Using new keyword, strings are created in heap memory
+String str = new String(Hrllo);
+2) Using String literal, strings are created in SCPool
+String str = Hello;
+
+String Immutable concept is applicable to both Heap n Scpool
+
+String s1 = "Hello";
+String s2 = "Hello";
+String s3 ="abc";
+// the number of objects created are - 2
+
+String s1= new String(Hello);
+String s2= new String(Hello);
+String s3 = new String(abc);
+// the number of objects created are - 3
+
+Why we are gng for String constant pool - to save the memory, security issues(Over the internet string parameters are widely 
+used we dont want them to get modified, they made string as immutable)
+
+How SCPool works - if there is a string obj which is already existing in th epool and someone is trying to create the same value
+again, the new ref will be pointing to existing obj in pool rather than creating a new obj again.
+
+Heap - Even though same obj already exist, whenevr new keyword is used to create obj again. it will create a new memory location
+
+
+The values are not modified unless u point to a new object - it is appilicable to both Heap , constant pool
+
+
+Diffenece bet == and equals
+
+== - it will compare references instead of values
+equals - it will compare values
+
+String internally are stored in a char array
+char c = 's';
+char[] c = {'s','a','v','e'}
+String s = "save";
+
+String class
+s= hello
+
+String s1 = new String();
+s1.s = world;
+
+
+StringBuffer n StringBuilder - mutable
+
+StringBuffer - mutable, methods are synchronised  which is preferred in multithreading environment 
+StringBuilder - mutable, methods are not synchronized which is not preferred in multithreading environment, hence faster
+
+Both Buffer n builder classes are preferred when there are modifications on the strings
